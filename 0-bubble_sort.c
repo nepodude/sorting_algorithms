@@ -25,10 +25,10 @@ void bubble_sort(int *array, size_t size)
 				array[j + 1] = temp;
 				while (k < size - 1)
 				{
-					printf("%d, ", array[k]);
+					my_printf("%d, ", array[k]);
 					k++;
 				}
-				printf("%d\n", array[k]);
+				my_printf("%d\n", array[k]);
 			}
 			j++;
 		}
