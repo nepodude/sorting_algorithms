@@ -19,7 +19,7 @@ void insertion_sort_list(listint_t **list)
 		while (current->prev && current->n < current->prev->n)
 		{
 			swap_nodes(list, current->prev, current);
-			print_list(*list);
+			print_list((const listint_t *)*list);
 		}
 		current = next_node;
 	}
