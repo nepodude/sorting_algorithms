@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *next_node;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (!list || !*list || !(*list)->next)
 		return;
 
 	current = (*list)->next;
@@ -34,6 +34,9 @@ void insertion_sort_list(listint_t **list)
 void swap_nodes(listint_t **list, listint_t *node1, listint_t
 *node2)
 {
+    if (!node1 || !node2)
+		return;
+
 	if (node1->prev)
 		node1->prev->next = node2;
 	else
