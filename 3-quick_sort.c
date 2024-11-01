@@ -1,22 +1,5 @@
 #include "sort.h"
 
-size_t is_same(int *array, size_t size)
-{
-	size_t i, j = 0;
-
-	i = 0;
-	while (j < size)
-	{
-		if (array[j] != array[j + 1])
-		{
-			i = 1;
-			return (i);
-		}
-		j++;
-	}
-	return (i);
-}
-
 /**
  * swap - Swap two elements in an array.
  * @a: The first element.
@@ -92,12 +75,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-
-	if (is_same(array, size) == 1)
-	{
-		print_array(array, size);
-		return;
-	}
-
 	quick_sort_recursive(array, 0, size - 1, size);
 }
